@@ -11,7 +11,7 @@ files = os.listdir(current_directory)
 
 # 遍历文件夹内的所有文件
 for file in files:
-    # 如果文件是CSV文件，则读取内容
+    # 如果文件是CSV文件，则读取内容，並排除名子有_output的部分
     if file.endswith('.csv')&(not "_output"in file):
         print("正在读取文件:", file)
         with open(file, 'r', newline='', encoding='utf-8') as csvfile:
